@@ -43,7 +43,7 @@ def factorial(n):
         return 1
     return n * factorial(n - 1)
 n = 5
-print(f"Factorial of {n} is {factorial(n)}")'''
+print(f"Factorial of {n} is {factorial(n)}")
 #sum of digits of a number
 def sum_of_digits(n):
     if n == 0:
@@ -52,4 +52,36 @@ def sum_of_digits(n):
     n = n // 10
     return rem + sum_of_digits(n)
 n = 12345
-print(f"Sum of digits of {n} is {sum_of_digits(n)}")
+print(f"Sum of digits of {n} is {sum_of_digits(n)}")'''
+#reverse a string
+def reverse_string(n):
+    if len(s) == 0:
+        return s
+    rem = n % 10
+    rev = rev * 10 + rem
+    return reverse_string(n // 10)
+s = "Hello, World!"
+print(f"Reversed string: {reverse_string(s)}")
+#palindrome string
+def is_palindrome(s):
+    if  n == reverse_string(s):
+        return True
+    return False
+s = "madam"
+if is_palindrome(s):
+    print(f"{s} is a palindrome.")
+else:    print(f"{s} is not a palindrome.")
+#count the zeros in a number
+def count_zeros(n):
+    if n == 0:
+        return 1
+    if n < 10:
+        return 0
+    rem = n % 10
+    count = count_zeros(n // 10)
+    if rem == 0:
+        count += 1
+    return count
+n = 1002003
+print(f"Number of zeros in {n} is {count_zeros(n)}")
+
